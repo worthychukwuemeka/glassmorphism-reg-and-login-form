@@ -1,5 +1,7 @@
+/* Importing Inter font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
 
+/* Resetting default styles for all elements */
 * {
     margin: 0;
     padding: 0;
@@ -7,17 +9,16 @@
     font-family: 'Inter', sans-serif;
 }
 
+/* Styling the body with flex to center content vertically and horizontally */
 body {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     background-color: pink;
-    background-repeat: no-repeat;
-    background-position: center;
-    overflow: hidden;
 }
 
+/* Container styling with rounded corners, absolute positioning, and overflow hidden */
 .container {
     border-radius: 10px;
     position: absolute;
@@ -26,6 +27,7 @@ body {
     overflow: hidden;
 }
 
+/* Form styling with a semi-transparent background and blurred backdrop */
 form {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(30px);
@@ -37,10 +39,7 @@ form {
     align-items: center;
 }
 
-.social {
-    margin: 16px 0;
-}
-
+/* Styling for social icons with a hover effect */
 .social div {
     background: rgba(255, 255, 255, 0.15);
     width: 40px;
@@ -49,4 +48,30 @@ form {
     justify-content: center;
     align-items: center;
     margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.social div:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Styling for input group with flex column layout and centered items */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling for form inputs with background, color, padding, margin, width, and border-radius */
+.input-group input {
+    background: rgba(255, 255, 255, 0.15);
+    color: #EEE;
+    padding: 15px;
+    margin: 8px 0;
+    width: 250px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
 }
