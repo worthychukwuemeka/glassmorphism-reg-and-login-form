@@ -1,13 +1,120 @@
 /* Importing Inter font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;200;300;400;500;600;700;800&display=swap');
 
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'DM Sans', sans-serif;
 }
+
+/* Set the background color of the body */
+body {
+    background-color: aliceblue;
+  }
+  
+  /* Position and center the container using absolute positioning and transform */
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Apply rotation animation to the preloader using keyframes */
+  .container .preloader {
+    animation: rotate 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+  }
+  
+  /* Define the keyframes for the rotation animation */
+  @keyframes rotate {
+    50% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(720deg);
+    }
+  }
+  
+  /* Styling for individual heart shapes */
+  .preloader span {
+    position: absolute;
+    display: block;
+    height: 64px;
+    width: 64px;
+    background: #f23fcb;
+    border: 1px solid #f23fcb;
+    border-radius: 100%;
+  }
+  
+  /* Position and apply animation to the first heart shape */
+  .preloader span:nth-child(1) {
+    transform: translate(-28px, -28px);
+    animation: shape_1 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+  }
+  
+  /* Define keyframes for the animation of the first heart shape */
+  @keyframes shape_1 {
+    60% {
+      transform: scale(0.4);
+    }
+  }
+  
+  /* Position and apply animation to the second heart shape */
+  .preloader span:nth-child(2) {
+    transform: translate(28px, -28px);
+    animation: shape_2 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+  }
+  
+  /* Define keyframes for the animation of the second heart shape */
+  @keyframes shape_2 {
+    40% {
+      transform: scale(0.4);
+    }
+  }
+  
+  /* Styling and animation for the third heart shape */
+  .preloader span:nth-child(3) {
+    position: relative;
+    border-radius: 0px;
+    transform: scale(0.98) rotate(-45deg);
+    animation: shape_3 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+  }
+  
+  /* Define keyframes for the animation of the third heart shape */
+  @keyframes shape_3 {
+    50% {
+      border-radius: 100%;
+      transform: scale(0.5) rotate(-45deg);
+    }
+    100% {
+      transform: scale(0.98) rotate(-45deg);
+    }
+  }
+  
+  /* Styling and animation for the shadow beneath the hearts */
+  .shadow {
+    position: relative;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    height: 16px;
+    width: 64px;
+    border-radius: 50%;
+    background-color: #e4e3e3;
+    border: 1px solid #e4e3e3;
+    animation: shadow 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+  }
+  
+  /* Define keyframes for the animation of the shadow */
+  @keyframes shadow {
+    50% {
+      transform: translateX(-50%) scale(0.5);
+      border-color: #f2f2f2;
+    }
+  }
 
 .wrapper {
     display: flex;
